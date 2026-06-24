@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/mingw64/bin/pdfinfo \"D:/Nabila/KULIAH/Kuliah Unissula/MODUL WEB PROGRAMMING BAB 2.pdf\")",
+      "Bash(/mingw64/bin/pdftotext -layout \"D:/Nabila/KULIAH/Kuliah Unissula/MODUL WEB PROGRAMMING BAB 2.pdf\" \"D:/Nabila/Personal Project/CI4WebPraktikum/writable/modul_bab2.txt\" && echo \"OK extracted\" && wc -l \"D:/Nabila/Personal Project/CI4WebPraktikum/writable/modul_bab2.txt\")"
+    ]
+  }
+}
