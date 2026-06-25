@@ -1,38 +1,47 @@
-<!doctype html>
-<html lang="id">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Form Praktikum</title>
-    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
-</head>
-<body>
-    <main class="container">
-        <h1>Form Praktikum</h1>
+<?= $this->extend('layout/main') ?>
 
-        <form action="<?= base_url('praktikum/simpan') ?>" method="post">
-            <?= csrf_field() ?>
+<?= $this->section('title') ?>Form Praktikum<?= $this->endSection() ?>
 
-            <label for="nama">Nama</label>
-            <input type="text" id="nama" name="nama" required>
+<?= $this->section('content') ?>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h1 class="text-primary mb-3">Form Praktikum</h1>
 
-            <label for="nim">NIM</label>
-            <input type="text" id="nim" name="nim" required>
+            <form action="<?= base_url('praktikum/simpan') ?>" method="post">
+                <?= csrf_field() ?>
 
-            <label for="kelas">Kelas</label>
-            <input type="text" id="kelas" name="kelas" required>
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="nama" name="nama" required>
+                </div>
 
-            <label for="matakuliah">Mata Kuliah</label>
-            <input type="text" id="matakuliah" name="matakuliah" required>
+                <div class="mb-3">
+                    <label for="nim" class="form-label">NIM</label>
+                    <input type="text" class="form-control" id="nim" name="nim" required>
+                </div>
 
-            <label for="dosen_pengampu">Dosen Pengampu</label>
-            <input type="text" id="dosen_pengampu" name="dosen_pengampu" required>
+                <div class="mb-3">
+                    <label for="kelas" class="form-label">Kelas</label>
+                    <input type="text" class="form-control" id="kelas" name="kelas" required>
+                </div>
 
-            <label for="asisten_praktikum">Asisten Praktikum</label>
-            <input type="text" id="asisten_praktikum" name="asisten_praktikum" required>
+                <div class="mb-3">
+                    <label for="matakuliah" class="form-label">Mata Kuliah</label>
+                    <input type="text" class="form-control" id="matakuliah" name="matakuliah" required>
+                </div>
 
-            <button type="submit">Kirim</button>
-        </form>
-    </main>
-</body>
-</html>
+                <div class="mb-3">
+                    <label for="dosen_pengampu" class="form-label">Dosen Pengampu</label>
+                    <input type="text" class="form-control" id="dosen_pengampu" name="dosen_pengampu" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="asisten_praktikum" class="form-label">Asisten Praktikum</label>
+                    <input type="text" class="form-control" id="asisten_praktikum" name="asisten_praktikum" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Kirim</button>
+            </form>
+        </div>
+    </div>
+<?= $this->endSection() ?>

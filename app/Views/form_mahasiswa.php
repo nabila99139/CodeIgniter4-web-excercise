@@ -1,79 +1,61 @@
-<!doctype html>
-<html lang="id">
+<?= $this->extend('layout/main') ?>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Form Mahasiswa</title>
-    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
-</head>
+<?= $this->section('title') ?>Form Mahasiswa<?= $this->endSection() ?>
 
-<body>
-    <style>
-        .container {
-            display: grid;
-        }
+<?= $this->section('content') ?>
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h1 class="text-primary mb-3">Form Mahasiswa</h1>
 
-        table {
-            border: 1px solid black;
-        }
+            <?php if (! empty($pesan)) : ?>
+                <div class="alert alert-success" role="alert"><?= esc($pesan) ?></div>
+            <?php endif; ?>
 
-        body {
-            background: grey;
-        }
+            <form action="<?= base_url('mahasiswa/simpan') ?>" method="post">
+                <?= csrf_field() ?>
 
-        h1 {
-            text-align: center;
-        }
-    </style>
+                <div class="mb-3">
+                    <label for="nim" class="form-label">NIM</label>
+                    <input type="text" class="form-control" id="nim" name="nim" required>
+                </div>
 
-    <main class="container">
-        <h1>Form Mahasiswa</h1>
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="nama" name="nama" required>
+                </div>
 
-        <?php if (! empty($pesan)) : ?>
-            <p class="message"><?= esc($pesan) ?></p>
-        <?php endif; ?>
+                <div class="mb-3">
+                    <label for="prodi" class="form-label">Prodi</label>
+                    <input type="text" class="form-control" id="prodi" name="prodi" required>
+                </div>
 
-        <form action="<?= base_url('mahasiswa/simpan') ?>" method="post">
-            <?= csrf_field() ?>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </form>
 
-            <label for="nim">NIM</label>
-            <input type="text" id="nim" name="nim" required>
-
-            <label for="nama">Nama</label>
-            <input type="text" id="nama" name="nama" required>
-
-            <label for="prodi">Prodi</label>
-            <input type="text" id="prodi" name="prodi" required>
-
-            <button type="submit">Simpan</button>
-        </form>
-
-        <table border="true">
-            <thead>
-                <tr>
-                    <th>NIM</th>
-                    <th>Nama</th>
-                    <th>Prodi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php if (! empty($mahasiswa)) : ?>
+            <table class="table table-bordered mt-4">
+                <thead>
                     <tr>
-                        <td><?= esc($mahasiswa['nim']) ?></td>
-                        <td><?= esc($mahasiswa['nama']) ?></td>
-                        <td><?= esc($mahasiswa['prodi']) ?></td>
+                        <th>NIM</th>
+                        <th>Nama</th>
+                        <th>Prodi</th>
                     </tr>
-                <?php else : ?>
-                    <tr>
-                        <td>2211001</td>
-                        <td>Budi</td>
-                        <td>Teknik Informatika</td>
-                    </tr>
-                <?php endif; ?>
-            </tbody>
-        </table>
-    </main>
-</body>
-
-</html>
+                </thead>
+                <tbody>
+                    <?php if (! empty($mahasiswa)) : ?>
+                        <tr>
+                            <td><?= esc($mahasiswa['nim']) ?></td>
+                            <td><?= esc($mahasiswa['nama']) ?></td>
+                            <td><?= esc($mahasiswa['prodi']) ?></td>
+                        </tr>
+                    <?php else : ?>
+                        <tr>
+                            <td>2211001</td>
+                            <td>Budi</td>
+                            <td>Teknik Informatika</td>
+                        </tr>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<?= $this->endSection() ?>

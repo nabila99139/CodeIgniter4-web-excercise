@@ -14,3 +14,7 @@ $routes->post('mahasiswa/simpan', 'Mahasiswa::simpan');
 // Tugas BAB 2 - Routing dan Controller
 $routes->get('praktikum/form', 'Praktikum::form');
 $routes->post('praktikum/simpan', 'Praktikum::simpan');
+
+
+// php spark serve
+// http://localhost:8080/profil atau /mahasiswa/form.

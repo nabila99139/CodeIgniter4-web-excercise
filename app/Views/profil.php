@@ -1,25 +1,20 @@
-<!doctype html>
-<html lang="id">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Profil Mahasiswa</title>
-    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
-</head>
-<body>
-    <main class="container">
-        <h1>Profil Mahasiswa</h1>
-        <p>Ini adalah halaman profil.</p>
+<?= $this->extend('layout/main') ?>
 
-        <ul>
-            <li>Nama: <?php echo $nama ?></li>
-            <li>NIM: <?php echo $nim ?></li>
-            <li>Kelas: <?php echo $kelas ?></li>
-        </ul>
+<?= $this->section('title') ?>Profil Mahasiswa<?= $this->endSection() ?>
 
-        <p>
-            <a href="<?= base_url('mahasiswa/form') ?>">Buka Form Mahasiswa</a>
-        </p>
-    </main>
-</body>
-</html>
+<?= $this->section('content') ?>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h1 class="text-primary mb-3">Profil Mahasiswa</h1>
+            <p>Ini adalah halaman profil.</p>
+
+            <ul class="list-group mb-3">
+                <li class="list-group-item"><strong>Nama:</strong> <?php echo $nama ?></li>
+                <li class="list-group-item"><strong>NIM:</strong> <?php echo $nim ?></li>
+                <li class="list-group-item"><strong>Kelas:</strong> <?php echo $kelas ?></li>
+            </ul>
+
+            <a href="<?= base_url('mahasiswa/form') ?>" class="btn btn-primary">Buka Form Mahasiswa</a>
+        </div>
+    </div>
+<?= $this->endSection() ?>
