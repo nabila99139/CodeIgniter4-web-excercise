@@ -10,13 +10,7 @@ class Biodata extends BaseController
      */
     public function index(): string
     {
-        // Data ini dikirim dari Controller ke View via parameter kedua view().
-        // Ganti nilai di bawah dengan data pribadi kamu.
         $data = [
-            // 'nama'  => 'Nabila',
-            // 'nim'   => '2211001',
-            // 'kelas' => 'TI-A',
-            // 'prodi' => 'Teknik Informatika',
             'nama'  => 'Nabila Anindya Hassya',
             'nim'   => '32602400080',
             'prodi' => 'Teknik Informatika',
