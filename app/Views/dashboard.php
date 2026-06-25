@@ -8,7 +8,7 @@
         <p class="text-muted mb-0">Selamat datang! Pilih fitur yang ingin kamu akses.</p>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-3 g-3">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
         <div class="col">
             <div class="card h-100 shadow-sm">
                 <div class="card-body d-flex flex-column">
@@ -35,6 +35,16 @@
                     <h5 class="card-title text-primary">Form Praktikum</h5>
                     <p class="card-text text-muted">Input data praktikum (Tugas BAB 2).</p>
                     <a href="<?= base_url('praktikum/form') ?>" class="btn btn-primary mt-auto">Buka</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-primary">Biodata Mahasiswa</h5>
+                    <p class="card-text text-muted">View + data dari Controller (Tugas BAB 3).</p>
+                    <a href="<?= base_url('biodata') ?>" class="btn btn-primary mt-auto">Buka</a>
                 </div>
             </div>
         </div>

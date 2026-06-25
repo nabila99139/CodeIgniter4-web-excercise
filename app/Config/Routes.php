@@ -15,6 +15,9 @@ $routes->post('mahasiswa/simpan', 'Mahasiswa::simpan');
 $routes->get('praktikum/form', 'Praktikum::form');
 $routes->post('praktikum/simpan', 'Praktikum::simpan');
 
+// Tugas BAB 3 - View HTML pada CI4
+$routes->get('biodata', 'Biodata::index');
+
 
 // php spark serve
 // http://localhost:8080/profil atau /mahasiswa/form.
