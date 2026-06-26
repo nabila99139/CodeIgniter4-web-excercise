@@ -8,8 +8,12 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('profil', 'Profil::index');
 $routes->get('profile', 'Profil::index');
+$routes->get('mahasiswa', 'Mahasiswa::index');
 $routes->get('mahasiswa/form', 'Mahasiswa::form');
 $routes->post('mahasiswa/simpan', 'Mahasiswa::simpan');
+$routes->get('mahasiswa/edit/(:segment)', 'Mahasiswa::edit/$1');
+$routes->post('mahasiswa/update/(:segment)', 'Mahasiswa::update/$1');
+$routes->post('mahasiswa/hapus/(:segment)', 'Mahasiswa::hapus/$1');
 
 // Tugas BAB 2 - Routing dan Controller
 $routes->get('praktikum/form', 'Praktikum::form');

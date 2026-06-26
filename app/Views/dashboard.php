@@ -33,7 +33,7 @@
                     <span class="card-icon"><i class="fa-solid fa-pen-to-square"></i></span>
                     <h5 class="card-title">Form Mahasiswa</h5>
                     <p class="card-text text-muted">Input data mahasiswa (Pretest).</p>
-                    <a href="<?= base_url('mahasiswa/form') ?>" class="btn btn-primary mt-auto">Buka <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="<?= base_url('mahasiswa') ?>" class="btn btn-primary mt-auto">Buka <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>

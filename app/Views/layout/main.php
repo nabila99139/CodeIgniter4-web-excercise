@@ -21,7 +21,7 @@
             </a>
             <div class="nav-links">
                 <a href="<?= base_url('profil') ?>">Profil</a>
-                <a href="<?= base_url('mahasiswa/form') ?>">Mahasiswa</a>
+                <a href="<?= base_url('mahasiswa') ?>">Mahasiswa</a>
                 <a href="<?= base_url('praktikum/form') ?>">Praktikum</a>
                 <a href="<?= base_url('biodata') ?>">Biodata</a>
             </div>
