@@ -60,12 +60,16 @@ $RECYCLE.BIN/
 # These should never be under version control,
 # as it poses a security risk.
 .env
+.env.*
+!.env.example
 .vagrant
 Vagrantfile
 
 #-------------------------
 # Temporary Files
 #-------------------------
+writable/*.log
+
 writable/cache/*
 !writable/cache/index.html
 
@@ -139,6 +143,11 @@ nb-configuration.xml
 
 # Visual Studio Code
 .vscode/
+
+# Local AI assistant/editor state
+.claude/
+.codex/
+.agents/
 
 /results/
 /phpunit*.xml
